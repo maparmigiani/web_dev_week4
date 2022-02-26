@@ -1,0 +1,33 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+
+<main class = "container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Contact Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email Adress</th>
+          </tr>
+        </thead>
+        <tbody>
+        <%for(let count = 0; count < InformationList.length; count ++) { %>
+          <tr>
+            
+            <td><%=InformationList[count].name %></td>
+            <td><%=InformationList[count].number %></td>
+            <td>@<%=InformationList[count].email %></td>
+          </tr>
+        <% } %>
+
+        </tbody>
+
+      </table>
+
+
+</main>
+
+
+    <%- include partials/bottom_nav.ejs %>
+    <%- include partials/footer.ejs %>
